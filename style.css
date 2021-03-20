@@ -81,7 +81,7 @@ button:active {
 
 
 /* media query: mobile device */
-@media screen and (max-width: 825px){
+@media screen and (max-width: 850px){
     .quote-container{
         margin: auto 10px;
     }
