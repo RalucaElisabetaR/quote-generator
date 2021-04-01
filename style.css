@@ -29,6 +29,7 @@ footer:hover {
     filter: brightness(110%);
 }
 #bottom-link:hover {
+    filter: brightness(110%);
 }
 .quote-container {
     width: auto;
