@@ -11,7 +11,8 @@
             name="keywords"
             content="HTML,CSS,JavaScript,Fetch,Async/Await,Quote API,CORS with Twitter integration."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <title>Random Quote Generator</title>
         <link rel="icon" type="image/png" href="favicon.png" />
         <link
@@ -21,35 +22,44 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="quote-container" id="quote-container">
-            <!-- Quote -->
-            <div class="quote-text">
-                <i class="fas fa-quote-left"></i>
-                <span id="quote"></span>
+        <div class="box">
+            <div class="box quote-container" id="quote-container">
+                <!-- Quote -->
+                <div class="quote-text">
+                    <i class="fas fa-quote-left"></i>
+                    <span id="quote"></span>
+                </div>
+                <!-- Author -->
+                <div class="quote-author">
+                    <span id="author"></span>
+                </div>
+                <!-- Buttons -->
+                <div class="button-container">
+                    <button
+                        class="twitter-button"
+                        id="twitter"
+                        title="Tweet This!"
+                    >
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button id="new-quote">New Quote</button>
+                </div>
             </div>
-            <!-- Author -->
-            <div class="quote-author">
-                <span id="author"></span>
-            </div>
-            <!-- Buttons -->
-            <div class="button-container">
-                <button class="twitter-button" id="twitter" title="Tweet This!">
-                    <i class="fab fa-twitter"></i>
-                </button>
-                <button id="new-quote">New Quote</button>
-            </div>
+            <!-- Loader -->
+            <div class="loader" id="loader"></div>
+            <hr />
+
+            <footer class="fab">
+                Follow Me On
+                <a
+                    style="color: #38a2f3b8"
+                    href="https://github.com/RalucaElisabetaR"
+                >
+                    GitHub</a
+                >
+            </footer>
+            <hr />
         </div>
-        <!-- Loader -->
-        <div class="loader" id="loader"></div>
-        <footer>
-            Follow Me On
-            <a
-                style="color: rgb(238, 255, 131)"
-                href="https://github.com/RalucaElisabetaR"
-            >
-                GitHub</a
-            >
-        </footer>
         <!-- Script -->
         <!-- <script src="quotes.js"></script> -->
         <script src="script.js"></script>
