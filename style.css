@@ -19,11 +19,14 @@ body {
     justify-content: center;
 }
 .box {
-    margin-top: auto;
-    margin-bottom: 30px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 footer {
     padding: 20px;
+
+    margin: auto 10px;
 }
 footer:hover {
     filter: brightness(110%);
@@ -31,15 +34,13 @@ footer:hover {
 #bottom-link:hover {
     filter: brightness(110%);
 }
-.quote-container {
-    width: auto;
-    height: 50%;
+#quote-container {
     max-width: 800px;
     padding: 50px 30px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.4);
     box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 5rem;
+    margin: auto 10px 0 10px;
 }
 hr {
     border: 0;
@@ -94,6 +95,10 @@ button:active {
     transform: translate(0, 0.3rem);
     box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
+.fab {
+    display: flex;
+    justify-content: center;
+}
 
 .twitter-button:hover {
     color: #38a1f3;
@@ -123,10 +128,10 @@ button:active {
 }
 
 @media screen and (max-width: 1024px) {
-    .quote-container {
-        margin: 50px 15px;
-    }
     .quote-text {
+        font-size: 2rem;
+    }
+    .long-quote {
         font-size: 2rem;
     }
     .quote-author {
@@ -139,6 +144,9 @@ button:active {
 @media screen and (max-width: 600px) {
     .quote-text {
         font-size: 1.6rem;
+    }
+    .long-quote {
+        font-size: 1.5rem;
     }
     .quote-author {
         font-size: 1.1rem;
@@ -159,5 +167,8 @@ button:active {
     }
     .fa-quote-left {
         font-size: 1.5rem;
+    }
+    .long-quote {
+        font-size: 1.3rem;
     }
 }

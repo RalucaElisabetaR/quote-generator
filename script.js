@@ -19,15 +19,19 @@ function newQuote() {
   // Pick a random quote from array
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
   // Check if Author field is blank and replace it with 'Unknown'
-  if (!quote.author) {
+  if (!quote.author)
+  {
     authorText.textContent = 'Unknown';
-  } else {
+  } else
+  {
     authorText.textContent = quote.author;
   }
   // reduce fontsize for long quotes
-  if (quote.text.length > 120) {
+  if (quote.text.length > 100)
+  {
     quoteText.classList.add('long-quote');
-  } else {
+  } else
+  {
     quoteText.classList.remove('long-quote');
   }
   quoteText.textContent = quote.text;
@@ -38,11 +42,13 @@ function newQuote() {
 async function getQuotes() {
   showLoadingSpinner();
   const apiUrl = 'https://type.fit/api/quotes';
-  try {
+  try
+  {
     const response = await fetch(apiUrl);
     apiQuotes = await response.json();
     newQuote();
-  } catch (error) {
+  } catch (error)
+  {
     // Catch Error Here
   }
 }
