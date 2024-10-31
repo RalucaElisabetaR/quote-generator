@@ -42,16 +42,18 @@ function newQuote() {
 async function getQuotes() {
   showLoadingSpinner();
   const apiUrl = 'https://type.fit/api/quotes';
-  try
-  {
+  try {
     const response = await fetch(apiUrl);
     apiQuotes = await response.json();
     newQuote();
-  } catch (error)
-  {
-    // Catch Error Here
+  } catch (error) {
+    // Fallback to local quotes if API request fails
+    console.error('API fetch failed, using local quotes', error);
+    apiQuotes = localQuotes;
+    newQuote();
   }
 }
+
 
 // Tweet Quote
 function tweetQuote() {
